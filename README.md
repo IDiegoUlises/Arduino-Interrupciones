@@ -1,2 +1,2 @@
 # Arduino Interrupciones
-El arduino esta realizando una accion infinita por ser una accion infinita no permite que se ejecute otra acciones esta accion nunca terminara  podemos usar una interrupcion para salir de una accion infinita y para realizar otra accion.
+Cuando el arduino esta realizando una accion infinita esta no permite que se ejecute otra acciones esta accion dura para siempre  podemos usar una interrupcion para salir de una accion infinita y para realizar otra accion.

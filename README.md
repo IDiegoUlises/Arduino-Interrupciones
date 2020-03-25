@@ -47,6 +47,13 @@ NoInterrupts(), desactiva la ejecución de interrupciones hasta nueva orden.
 
 Interrupts(), reactiva las interrupciones
 
+NO VERIFICADA.... SOLO COPIADA
+* LOW, La interrupción se dispara cuando el pin es LOW.
+* CHANGE, Se dispara cuando pase de HIGH a LOW o viceversa.
+* RISING, Dispara en el flanco de subida (Cuando pasa de LOW a HIGH).
+* FALLING, Dispara en el flanco de bajada (Cuando pasa de HIGH a LOW).
+* Y una solo para el DUE: HIGH se dispara cuando el pin esta HIGH.
+
 
 code:
 

@@ -6,7 +6,7 @@
 * Transferencias de datos I2C
 * Transferencias de datos USART
 
-No es posible utilizar el puerto serial durante una interrupcion porque cuando se utiliza una interrupcion detiene todas los procesos existente para atender uno especifico y las comunicaciones se ejecutan con una interrupcion.
+No es posible utilizar el puerto serial durante una interrupcion porque cuando se utiliza una interrupcion detiene todas los procesos existente para atender uno especifico y las comunicaciones se ejecutan en otra una interrupcion.
 
 **Como crear una buena interrupcion**
 * Deben ser rapidas

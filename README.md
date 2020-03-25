@@ -9,11 +9,10 @@ Cuando se esta realizando un proceso y sucede un imprevisto se debe atender con 
 
 No es posible utilizar el puerto serial durante una interrupcion porque cuando se utiliza una interrupcion detiene todas los procesos existente para atender uno especifico y las comunicaciones se ejecutan con una interrupcion.
 
-
 **Como crear una buena interrupcion**
 * Deben ser rapidas
-* NO debe usar funciones que relentizen como delay();
-* En caso que cambia una variable debe estar asignada como Volatile
+* No debe usar funciones que relentizen el tiempo como delay();
+* Cuando cambia una variable esta debe estar declarada como Volatile
 
 Se debe usar la palabra Volatile para modificar variables en una interrupcion ya que indica al compilador que cargue la variable desde la RAM y no desde un registro de almacenamiento, que es una ubicación de memoria temporal donde se almacenan y manipulan las variables del programa.
 

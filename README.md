@@ -1,5 +1,4 @@
 # Arduino Interrupciones
-Cuando se esta realizando un proceso y sucede un imprevisto se debe atender con una interrupcion para detener el proceso actual para saltar a otro.
 
 **Las interrupciones estan presentes en las comunicaciones**
 

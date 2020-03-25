@@ -15,6 +15,7 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 
 Se debe usar la palabra Volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
+Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion esta puede afectar si usted intenta medir el tiempo ya que ese tiempo de la interrupcion no sera incluido.
 
 
 Pines
@@ -37,3 +38,35 @@ MKR1000
 
 Due
 * Todos los pines digitales
+
+attachInterrupt para iniciar interrupcion 
+detachInterrupt(pin) detiene una interrupcion
+
+NoInterrupts(), desactiva la ejecución de interrupciones hasta nueva orden. Equivale a cli()
+Interrupts(), reactiva las interrupciones. Equivale a sei()
+
+
+code:
+
+//volatile int estado = 0;
+const int led = 3;
+
+void setup()
+{
+attachInterrupt(digitalPinToInterrupt(2),boton,LOW);
+pinMode(led,OUTPUT);
+}
+
+void loop()
+{
+while(true)
+{
+ //se queda sin hacer nada infinitamente
+}
+
+}
+
+void boton()
+{
+  digitalWrite(led,HIGH);
+}

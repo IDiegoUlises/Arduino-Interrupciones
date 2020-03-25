@@ -14,7 +14,7 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 * No debe usar funciones que relentizen el tiempo como delay();
 * Cuando cambia una variable esta debe estar declarada como Volatile
 
-Se debe usar la palabra Volatile para modificar variables en una interrupcion ya que indica al compilador que cargue la variable desde la RAM y no desde un registro de almacenamiento, que es una ubicación de memoria temporal donde se almacenan y manipulan las variables del programa.
+Se debe usar la palabra Volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
 
 --Agregar fuentes o sera eliminada en caso que no tenga utilidad.

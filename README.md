@@ -40,14 +40,17 @@ Due
 * Todos los pines digitales
 
 attachInterrupt para iniciar interrupcion 
+
 detachInterrupt(pin) detiene una interrupcion
 
-NoInterrupts(), desactiva la ejecución de interrupciones hasta nueva orden. Equivale a cli()
-Interrupts(), reactiva las interrupciones. Equivale a sei()
+NoInterrupts(), desactiva la ejecución de interrupciones hasta nueva orden.
+
+Interrupts(), reactiva las interrupciones
 
 
 code:
 
+```c++
 //volatile int estado = 0;
 const int led = 3;
 
@@ -70,3 +73,4 @@ void boton()
 {
   digitalWrite(led,HIGH);
 }
+``` 

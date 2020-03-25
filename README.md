@@ -1,4 +1,4 @@
-# Arduino Interrupciones
+# Arduino Interrupcion
 
 **Las interrupciones estan presentes en las comunicaciones**
 

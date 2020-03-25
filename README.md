@@ -16,5 +16,24 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 Se debe usar la palabra Volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
 
---Agregar fuentes o sera eliminada en caso que no tenga utilidad.
-Proriedad de interrupcion: Pueden ocurrir muchas interrupciones y las interrupcion solo se ejecuta 1 la vez por eso existen las proriedades para elegir que interrupcion se ejecuta primero que la otra debido a su importancia.  
+
+Pines
+PLACA	PINES INTERRUPCIONES
+
+Uno, Nano, Mini	
+* 2, 3
+
+Mega, Mega2560, MegaADK	
+* 2, 3, 18, 19, 20, 21
+
+Micro, Leonardo
+* 0, 1, 2, 3, 7
+
+Zero
+* Todos los pines digitales excepto el 4
+
+MKR1000
+* 0, 1, 4, 5, 6, 7, 8, 9, A1, A2
+
+Due
+* Todos los pines digitales

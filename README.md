@@ -11,7 +11,7 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 **Como crear una buena interrupcion**
 * Deben ser rapidas
 * No debe usar funciones que relentizen el tiempo como ```delay();```
-* Cuando cambia una variable esta debe estar declarada como ```volatile```
+* Cuando cambia una variable esta debe estar declarada como volatile
 
 Se debe usar la palabra Volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 

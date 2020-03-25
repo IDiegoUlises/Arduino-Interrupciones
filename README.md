@@ -13,7 +13,7 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 * No debe tener funciones que relentizen el tiempo como ```delay();```
 * Cuando cambias una variable fuera de una interrupcion debe estar declarada como volatile
 
-Se debe usar la palabra Volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
+Se debe usar identificar como volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
 Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion esta puede afectar si usted intenta medir el tiempo ya que ese tiempo de la interrupcion no sera incluido.
 

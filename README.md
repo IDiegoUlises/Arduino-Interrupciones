@@ -39,11 +39,11 @@ MKR1000
 Due
 * Todos los pines digitales
 
-attachInterrupt para iniciar interrupcion 
+attachInterrupt() para iniciar una interrupcion 
 
 detachInterrupt(pin) detiene una interrupcion
 
-NoInterrupts(), desactiva la ejecución de interrupciones hasta nueva orden.
+NoInterrupts(), desactiva todas las interrupciones
 
 Interrupts(), reactiva las interrupciones
 

@@ -52,7 +52,7 @@ NO VERIFICADA.... SOLO COPIADA
 * CHANGE, Se dispara cuando pase de HIGH a LOW o viceversa.
 * RISING, Dispara en el flanco de subida (Cuando pasa de LOW a HIGH).
 * FALLING, Dispara en el flanco de bajada (Cuando pasa de HIGH a LOW).
-* Y una solo para el DUE: HIGH se dispara cuando el pin esta HIGH.
+* HIGH, se dispara cuando el pin esta HIGH solo para el modelo due.
 
 
 code:

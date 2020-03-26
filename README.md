@@ -15,7 +15,7 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 
 Se debe usar identificar como volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
-Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion esta puede afectar si usted intenta medir el tiempo ya que ese tiempo de la interrupcion no sera incluido.
+Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion esto afecta si usted intenta medir el tiempo porque el tiempo de la interrupcion no sera incluido.
 
 
 Pines
@@ -53,6 +53,8 @@ NO VERIFICADA.... SOLO COPIADA
 * RISING, Dispara en el flanco de subida (Cuando pasa de LOW a HIGH).
 * FALLING, Dispara en el flanco de bajada (Cuando pasa de HIGH a LOW).
 * HIGH, se dispara cuando el pin esta HIGH solo para el modelo due.
+
+chiste... VAYA ESTO ES SOLO UNA COPIA DE UNA PUBLICACION EN INGLES Y MAS ENCIMA CON UNA PESIMA TRADUCCION JAJA FLANCO JAJAJA ESO NO TIENE SENTIDO NO SIGNFICA NADA EN ESPAÑOL LOS QUE HICIERON ESTO TODOS LOS DEMAS LO COPIARON Y HICIERON UN PESIMO TRABAJO JAJAJAJAJA
 
 
 code:

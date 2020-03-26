@@ -57,7 +57,7 @@ NO VERIFICADA.... SOLO COPIADA
 chiste... VAYA ESTO ES SOLO UNA COPIA DE UNA PUBLICACION EN INGLES Y MAS ENCIMA CON UNA PESIMA TRADUCCION JAJA FLANCO JAJAJA ESO NO TIENE SENTIDO NO SIGNFICA NADA EN ESPAÑOL LOS QUE HICIERON ESTO TODOS LOS DEMAS LO COPIARON Y HICIERON UN PESIMO TRABAJO JAJAJAJAJA
 
 
-code:
+code the testing:
 
 ```c++
 //volatile int estado = 0;
@@ -83,3 +83,32 @@ void boton()
   digitalWrite(led,HIGH);
 }
 ``` 
+este codigo no funciono en nada de lo abosulto el digitalwrite(); no cambia el valor de la variable yo pienso que solo declare digitalwrite(); yo le tenia que aver declarado como volatile int estado = digitalwrite(); esto se debe probar ...
+
+
+```c++
+volatile int estado = 0;
+const int led = 3;
+
+void setup()
+{
+attachInterrupt(digitalPinToInterrupt(2),boton,LOW);
+pinMode(led,OUTPUT);
+}
+
+void loop()
+{
+while(true)
+{
+ digitalWrite(led,estado);
+ estado = 1;
+}
+
+}
+
+void boton()
+{
+  estado = 0;
+}
+```
+este codigo en cambio si funciono en todo codigo la variable para modificarla en la interrupcion la escribi como volatile a lo mejor el codigo anterior no funciono porque toda variable independinte que sea funcion nativa como digitalWrite(); debe estar como una variable modifcable como volatile int cambiar = digitalwrite(); 

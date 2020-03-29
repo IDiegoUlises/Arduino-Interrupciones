@@ -110,7 +110,7 @@ void boton()
 {
   estado = 0;
 }
-}
+
 ```
 este codigo en cambio si funciono en todo codigo la variable para modificarla en la interrupcion la escribi como volatile a lo mejor el codigo anterior no funciono porque toda variable independinte que sea funcion nativa como digitalWrite(); debe estar como una variable modifcable como volatile int cambiar = digitalwrite(); 
 

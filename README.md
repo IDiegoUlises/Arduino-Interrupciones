@@ -11,9 +11,9 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 **Como crear una buena interrupcion**
 * Deben ser rapidas
 * No debe tener funciones que relentizen el tiempo como ```delay();```
-* Cuando cambias una variable fuera de una interrupcion debe estar declarada como volatile
+* En una interrupcion solo pueden modificar variables cuando son volatile
 
-Se debe usar identificar como volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
+Se define como volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
 Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion esto afecta si usted intenta medir el tiempo porque el tiempo de la interrupcion no sera incluido.
 
@@ -47,44 +47,14 @@ NoInterrupts(), desactiva todas las interrupciones
 
 Interrupts(), reactiva las interrupciones
 
-NO VERIFICADA.... SOLO COPIADA
-* LOW, La interrupción se dispara cuando el pin es LOW.
-* CHANGE, Se dispara cuando pase de HIGH a LOW o viceversa.
-* RISING, Dispara en el flanco de subida (Cuando pasa de LOW a HIGH).
-* FALLING, Dispara en el flanco de bajada (Cuando pasa de HIGH a LOW).
-* HIGH, se dispara cuando el pin esta HIGH solo para el modelo due.
+**Estados de inicio para una interrupcion**
+* LOW, La interrupción inicia cuando el pin esta LOW.
+* CHANGE, cuando pase de HIGH a LOW o viceversa.
+* RISING, cuando pasa de LOW a HIGH.
+* FALLING, cuando pasa de HIGH a LOW.
+* HIGH, cuando el pin esta en HIGH solo para el modelo due.
 
-chiste... VAYA ESTO ES SOLO UNA COPIA DE UNA PUBLICACION EN INGLES Y MAS ENCIMA CON UNA PESIMA TRADUCCION JAJA FLANCO JAJAJA ESO NO TIENE SENTIDO NO SIGNFICA NADA EN ESPAÑOL LOS QUE HICIERON ESTO TODOS LOS DEMAS LO COPIARON Y HICIERON UN PESIMO TRABAJO JAJAJAJAJA
-
-
-code the testing:
-
-```c++
-//volatile int estado = 0;
-const int led = 3;
-
-void setup()
-{
-attachInterrupt(digitalPinToInterrupt(2),boton,LOW);
-pinMode(led,OUTPUT);
-}
-
-void loop()
-{
-while(true)
-{
- digitalWrite(led,HIGH);
-}
-
-}
-
-void boton()
-{
-  digitalWrite(led,HIGH);
-}
-``` 
-este codigo no funciono en nada de lo abosulto el digitalwrite(); no cambia el valor de la variable yo pienso que solo declare digitalwrite(); yo le tenia que aver declarado como volatile int estado = digitalwrite(); esto se debe probar ...
-
+code the final:
 
 ```c++
 volatile int estado = 0;
@@ -112,33 +82,4 @@ void boton()
 }
 
 ```
-este codigo en cambio si funciono en todo codigo la variable para modificarla en la interrupcion la escribi como volatile a lo mejor el codigo anterior no funciono porque toda variable independinte que sea funcion nativa como digitalWrite(); debe estar como una variable modifcable como volatile int cambiar = digitalwrite(); 
-
-No se pueden utilizar variables de librerias porque las variables de la libreria no estan declaradas como volatile y digitalWrite(); 
-
-prueba??? curiosida sin documentacion y que pasa si llamos codigo de una libreria pero en un funcion declarada como volatile como 
-
-```c++
-//volatile int estado = 0;
-const int led = 3;
-
-void setup()
-{
-attachInterrupt(digitalPinToInterrupt(2),boton,LOW);
-pinMode(led,OUTPUT);
-}
-
-void loop()
-{
-while(true)
-{
- digitalWrite(led,HIGH);
-}
-
-}
-
-volatile void boton()
-{
-  digitalWrite(led,HIGH);
-}
-```
+Durante una inter

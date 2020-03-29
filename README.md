@@ -118,9 +118,35 @@ No se pueden utilizar variables de librerias porque las variables de la libreria
 
 prueba??? curiosida sin documentacion y que pasa si llamos codigo de una libreria pero en un funcion declarada como volatile como 
 
-```
-volatile funcion();
+```c++
+//volatile int estado = 0;
+const int led = 3;
+
+void setup()
 {
-digitalWrite(1,HIGH);
-]
+  attachInterrupt(digitalPinToInterrupt(2), boton, LOW);
+  pinMode(led, OUTPUT);
+}
+
+void loop()
+{
+  while (true)
+  {
+    digitalWrite(led, HIGH);
+  }
+
+}
+
+
+void boton()
+{
+  funcion();
+}
+
+volatile funcion()
+{
+  digitalWrite(led, HIGH);
+}
+
+
 ```

@@ -10,12 +10,12 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 
 **Como crear una buena interrupcion**
 * Deben ser rapidas
-* No debe tener funciones que relentizen el tiempo como ```delay();```
+* No debe tener funciones que relentizen el tiempo
 * En una interrupcion solo pueden modificar variables cuando son volatile
 
 Se define como volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
-Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion esto afecta si usted intenta medir el tiempo porque el tiempo de la interrupcion no sera incluido.
+Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion el tiempo de la interrupcion no sera incluido, las funciones delay(); y millis(); no funcionan dentro de una interrupcion porque se realiza atraves de una interrupcion la intruccion delayMicroseconds(); funciona normalmente.
 
 
 Pines
@@ -52,7 +52,9 @@ Interrupts(), reactiva las interrupciones
 * CHANGE, cuando pase de HIGH a LOW o viceversa.
 * RISING, cuando pasa de LOW a HIGH.
 * FALLING, cuando pasa de HIGH a LOW.
-* HIGH, cuando el pin esta en HIGH solo para el modelo due.
+* HIGH, cuando el pin esta en HIGH solo para el modelo due y zero.
+
+la verdad que solo me a funciona LOW...
 
 code the final:
 

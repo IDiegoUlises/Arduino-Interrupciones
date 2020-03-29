@@ -112,3 +112,14 @@ void boton()
 }
 ```
 este codigo en cambio si funciono en todo codigo la variable para modificarla en la interrupcion la escribi como volatile a lo mejor el codigo anterior no funciono porque toda variable independinte que sea funcion nativa como digitalWrite(); debe estar como una variable modifcable como volatile int cambiar = digitalwrite(); 
+
+No se pueden utilizar variables de librerias porque las variables de la libreria no estan declaradas como volatile y digitalWrite(); 
+
+prueba??? curiosida sin documentacion y que pasa si llamos codigo de una libreria pero en un funcion declarada como volatile como 
+
+```
+volatile funcion();
+{
+digitalWrite(1,HIGH);
+]
+```

@@ -124,29 +124,21 @@ const int led = 3;
 
 void setup()
 {
-  attachInterrupt(digitalPinToInterrupt(2), boton, LOW);
-  pinMode(led, OUTPUT);
+attachInterrupt(digitalPinToInterrupt(2),boton,LOW);
+pinMode(led,OUTPUT);
 }
 
 void loop()
 {
-  while (true)
-  {
-    digitalWrite(led, HIGH);
-  }
-
-}
-
-
-void boton()
+while(true)
 {
-  funcion();
+ digitalWrite(led,HIGH);
 }
 
-volatile funcion()
+}
+
+volatile void boton()
 {
-  digitalWrite(led, HIGH);
+  digitalWrite(led,HIGH);
 }
-
-
 ```

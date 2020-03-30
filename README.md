@@ -36,7 +36,7 @@ Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta q
 
 ```c++
 volatile int estado = 0;
-int led = 3;
+int led = 13;
 
 void setup()
 {
@@ -59,3 +59,5 @@ void interrupcion()
   estado = 0;
 }
 ```
+## Conexion
+<img src="https://github.com/IDiegoUlises/Boton-Con-Resistencia-PULLUP/blob/master/images/version-solo-boton-final.png" width="400" height="600" />

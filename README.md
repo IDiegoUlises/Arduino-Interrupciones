@@ -40,7 +40,7 @@ int led = 3;
 
 void setup()
 {
-attachInterrupt(digitalPinToInterrupt(2),boton,LOW);
+attachInterrupt(digitalPinToInterrupt(2),interrupcion,LOW);
 pinMode(led,OUTPUT);
 }
 
@@ -54,7 +54,7 @@ while(true)
 
 }
 
-void boton()
+void interrupcion()
 {
   estado = 0;
 }

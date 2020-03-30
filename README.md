@@ -49,10 +49,7 @@ Interrupts(), reactiva las interrupciones
 
 **Estados de inicio para una interrupcion**
 * LOW, La interrupción inicia cuando el pin esta LOW.
-* CHANGE, cuando pase de HIGH a LOW o viceversa.
-* RISING, cuando pasa de LOW a HIGH.
-* FALLING, cuando pasa de HIGH a LOW.
-* HIGH, cuando el pin esta en HIGH solo para el modelo due y zero.
+* Existen 5 estados mas yo solo recomiendo LOW porque el unico que funciona bien
 
 la verdad que solo me a funciona LOW...
 

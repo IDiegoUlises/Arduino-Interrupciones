@@ -13,7 +13,7 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 * No debe tener funciones que relentizen el tiempo
 * En una interrupcion solo pueden modificar variables cuando estan definidas como volatile
 
-Se define como volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
+Se define como volatile para modificar variables en una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
 Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion el tiempo de la interrupcion no sera incluido, las funciones ```delay();``` y ```millis();``` no funcionan dentro de una interrupcion porque trabaja atraves de una interrupcion la instruccion ```delayMicroseconds();``` es la unica que funciona correctamente.
 
@@ -32,7 +32,7 @@ Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta q
 * Existen 5 estados mas recomiendo LOW porque es el unico que funciona correctamente
 
 
-**Utilizando una interrupcion**
+**Iniciando Una interrupcion**
 
 ```c++
 volatile int estado = 0;

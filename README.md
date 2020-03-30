@@ -15,7 +15,7 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 
 Se define como volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
-Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion el tiempo de la interrupcion no sera incluido, las funciones delay(); y millis(); no funcionan dentro de una interrupcion porque se realiza atraves de una interrupcion la intruccion delayMicroseconds(); funciona normalmente.
+Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion el tiempo de la interrupcion no sera incluido, las funciones ```delay();``` y ```millis();``` no funcionan dentro de una interrupcion porque trabaja atraves de una interrupcion la intruccion ```delayMicroseconds();``` es la unica que funciona correctamente.
 
 
 Pines
@@ -39,19 +39,16 @@ MKR1000
 Due
 * Todos los pines digitales
 
-attachInterrupt() para iniciar una interrupcion 
-
-detachInterrupt(pin) detiene una interrupcion
-
-NoInterrupts(), desactiva todas las interrupciones
-
-Interrupts(), reactiva las interrupciones
+**Interrupcion**
+* Inicia una interrupcion ```attachInterrupt()``` 
+* Detiene una interrupcion ```detachInterrupt(pin)``` 
+* Deshabilita todas las interrupciones ```NoInterrupts()```
+* Habilita las interrupciones ```Interrupts()```
 
 **Estados de inicio para una interrupcion**
 * LOW, La interrupción inicia cuando el pin esta LOW.
-* Existen 5 estados mas yo solo recomiendo LOW porque el unico que funciona bien
+* Existen 5 estados mas solo recomiendo LOW porque es el unico que funciona correctamente
 
-la verdad que solo me a funciona LOW...
 
 code the final:
 
@@ -81,4 +78,3 @@ void boton()
 }
 
 ```
-Durante una inter

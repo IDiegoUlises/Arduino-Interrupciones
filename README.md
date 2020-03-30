@@ -59,5 +59,6 @@ void interrupcion()
   estado = 0;
 }
 ```
+
 ## Conexion
-<img src="https://github.com/IDiegoUlises/Boton-Con-Resistencia-PULLUP-Interna/blob/master/images/Boton-con-resistencia-externa.png" width="400" height="600" />
+<img src="https://github.com/IDiegoUlises/Arduino-Interrupciones/blob/master/images/Boton-con-resistencia-externa.png" width="400" height="600" />

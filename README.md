@@ -8,14 +8,14 @@
 
 No es posible utilizar el puerto serial durante una interrupcion porque cuando se utiliza una interrupcion detiene todas los procesos existente para atender uno especifico y las comunicaciones se ejecutan en otra una interrupcion.
 
-**Como crear una buena interrupcion**
+**Recomendacion para crear una interrupcion**
 * Deben ser rapidas
 * No debe tener funciones que relentizen el tiempo
-* En una interrupcion solo pueden modificar variables cuando son volatile
+* En una interrupcion solo pueden modificar variables cuando estan definidas como volatile
 
 Se define como volatile para modificar variables fuera de una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
-Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion el tiempo de la interrupcion no sera incluido, las funciones ```delay();``` y ```millis();``` no funcionan dentro de una interrupcion porque trabaja atraves de una interrupcion la intruccion ```delayMicroseconds();``` es la unica que funciona correctamente.
+Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion el tiempo de la interrupcion no sera incluido, las funciones ```delay();``` y ```millis();``` no funcionan dentro de una interrupcion porque trabaja atraves de una interrupcion la instruccion ```delayMicroseconds();``` es la unica que funciona correctamente.
 
 **Pins disponibles para una interrupcion**
 
@@ -28,15 +28,15 @@ Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta q
 * Habilita las interrupciones ```Interrupts()```
 
 **Estados de inicio para una interrupcion**
-* LOW, La interrupción inicia cuando el pin esta LOW.
-* Existen 5 estados mas solo recomiendo LOW porque es el unico que funciona correctamente
+* LOW, La interrupcion inicia cuando el pin esta LOW.
+* Existen 5 estados mas recomiendo LOW porque es el unico que funciona correctamente
 
 
-code the final:
+**Utilizando una interrupcion**
 
 ```c++
 volatile int estado = 0;
-const int led = 3;
+int led = 3;
 
 void setup()
 {
@@ -58,5 +58,4 @@ void boton()
 {
   estado = 0;
 }
-
 ```

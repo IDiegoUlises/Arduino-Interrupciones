@@ -62,3 +62,5 @@ void interrupcion()
 
 ## Conexion
 <img src="https://github.com/IDiegoUlises/Arduino-Interrupciones/blob/master/images/Boton-con-resistencia-externa.png" width="400" height="600" />
+
+## Funcionamiento insertar gif

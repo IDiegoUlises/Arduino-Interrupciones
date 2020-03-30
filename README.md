@@ -18,26 +18,7 @@ Se define como volatile para modificar variables fuera de una interrupcion ya qu
 Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion el tiempo de la interrupcion no sera incluido, las funciones ```delay();``` y ```millis();``` no funcionan dentro de una interrupcion porque trabaja atraves de una interrupcion la intruccion ```delayMicroseconds();``` es la unica que funciona correctamente.
 
 
-Pines
-PLACA	PINES INTERRUPCIONES
-
-Uno, Nano, Mini	
-* 2, 3
-
-Mega, Mega2560, MegaADK	
-* 2, 3, 18, 19, 20, 21
-
-Micro, Leonardo
-* 0, 1, 2, 3, 7
-
-Zero
-* Todos los pines digitales excepto el 4
-
-MKR1000
-* 0, 1, 4, 5, 6, 7, 8, 9, A1, A2
-
-Due
-* Todos los pines digitales
+<img src="https://github.com/IDiegoUlises/Arduino-Interrupciones/blob/master/images/pines-para-interrupciones.png" />
 
 **Interrupcion**
 * Inicia una interrupcion ```attachInterrupt()``` 

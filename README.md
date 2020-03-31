@@ -28,7 +28,7 @@ Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta q
 * Habilita las interrupciones ```Interrupts()```
 
 **Estados de inicio para una interrupcion**
-* LOW, la interrupcion inicia cuando el pin esta LOW.
+* LOW, la interrupcion inicia cuando el pin esta LOW
 * Existen 5 estados mas recomiendo LOW porque es el unico que funciona correctamente
 
 

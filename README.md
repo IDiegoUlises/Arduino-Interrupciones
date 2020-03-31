@@ -10,12 +10,12 @@ No es posible utilizar el puerto serial durante una interrupcion porque cuando s
 
 **Recomendacion para crear una interrupcion**
 * Deben ser rapidas
-* No debe tener funciones que relentizen el tiempo
+* No deben tener funciones que relentizen el tiempo
 * En una interrupcion solo pueden modificar variables cuando estan definidas como volatile
 
 Se define como volatile para modificar variables en una interrupcion ya que indica al compilador que cargue la variable desde la ram y no desde un registro de almacenamiento.
 
-Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion el tiempo de la interrupcion no sera incluido, las funciones ```delay();``` y ```millis();``` no funcionan dentro de una interrupcion porque trabaja atraves de una interrupcion la instruccion ```delayMicroseconds();``` es la unica que funciona correctamente.
+Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta que termine la interrupcion el tiempo de la interrupcion no sera incluido, las funciones ```delay();``` y ```millis();``` no funcionan dentro de una interrupcion porque trabajan atraves de una interrupcion la funcion ```delayMicroseconds();``` es la unica que funciona correctamente.
 
 **Pins disponibles para una interrupcion**
 
@@ -28,7 +28,7 @@ Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta q
 * Habilita las interrupciones ```Interrupts()```
 
 **Estados de inicio para una interrupcion**
-* LOW, La interrupcion inicia cuando el pin esta LOW.
+* LOW, la interrupcion inicia cuando el pin esta LOW.
 * Existen 5 estados mas recomiendo LOW porque es el unico que funciona correctamente
 
 

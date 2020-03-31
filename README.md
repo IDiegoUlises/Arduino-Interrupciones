@@ -32,7 +32,7 @@ Cuando se inicia una interrupcion el temporizador del arduino se detiene hasta q
 * Existen 5 estados mas recomiendo LOW porque es el unico que funciona correctamente
 
 
-**Iniciando Una interrupcion**
+**Iniciando una Interrupcion**
 
 ```c++
 volatile int estado = 0;
@@ -63,4 +63,5 @@ void interrupcion()
 ## Conexion
 <img src="https://github.com/IDiegoUlises/Arduino-Interrupciones/blob/master/images/Boton-con-resistencia-externa.png" width="400" height="600" />
 
-## Funcionamiento insertar gif
+## Funcionamiento
+![](https://github.com/IDiegoUlises/Arduino-Interrupciones/blob/master/images/Circuito-Interrupcion.gif)
